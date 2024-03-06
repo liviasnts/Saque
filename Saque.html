@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Saque Bancário </title>
+
+</head>
+<body>
+  <form>
+
+    <p> Valor disponível: <input type="text" id="saldo" readonly placeholder="saldo"> </p> 
+    <p> Digite o valor que deseja sacar: <input type="text" id="saq"> </p>
+     <button type="button" onclick="validarSaque()"> Realizar saque </button>
+
+  </form>
+
+     <script>
+        let valor = window.prompt("Digite seu saldo");
+       parseFloat(document.getElementById("saldo").value = valor);
+
+  function validarSaque() {
+        let valor = parseFloat(document.getElementById("valor").value);
+        let saq = parseFloat(document.getElementById("saq").value);
+       alert("Operação realizada com sucesso");
+       
+ if(saq <= valor){
+        let Operação = valor - saq;
+         document.getElementById("result").value = valor;
+         document.getElementById("result").style.color = "green"; 
+
+     }else{
+      alert("Operação não realizada com sucesso");
+    }
+  	 
+
+  }
+     
+    </script>
+    
+</body>
+</html>
